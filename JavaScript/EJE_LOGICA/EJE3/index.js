@@ -39,8 +39,10 @@ function rectangulo(num) {
         filaIntermedia += '*'; // Para añadir al lado derecho el último asterisco 
         rectangulo[i] = filaIntermedia; // Para guardar la fila en el array en la posicion de cada iteracion de i
 
-        return rectangulo;
     }
+   //Cosntruir ultima fila
+    rectangulo[num-1] = primeraFila;
+    return rectangulo;
   
 }
 let numero = Number(prompt("Introduce el tamaño del rectángulo:"));
