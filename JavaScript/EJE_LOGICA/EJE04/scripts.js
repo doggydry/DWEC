@@ -1,3 +1,9 @@
+/**
+ * 4- Crea una función reciba un número y que dibuje un triángulo de altura el tamaño del
+número indicado. El valor devuelto será un array con cada una de las cadenas que forman el
+rectángulo.
+Añade el código auxiliar necesario para probar la aplicación.
+ */
 function dibujarTriangulo(altura) {
     //Variable donde se alamacenaran todas las lineas
     let triangulo = '';

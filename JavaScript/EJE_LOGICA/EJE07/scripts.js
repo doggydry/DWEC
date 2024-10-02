@@ -1,3 +1,9 @@
+/**7-Crea una función que reciba un número e imprima la tabla de multiplicar.
+Crea una función que solicite dos números entre 0 y 10, y que imprima las tablas de multiplicar
+entre los números indicados. Las tablas aparecerán desde el número más pequeño al mayor
+(aquí hay validaciones).
+Añade el código auxiliar necesario para probar la aplicación.
+ */
 'use strict';
 function imprimirTabla(numero) {
     console.log("Tabla de multiplicar del " + numero);

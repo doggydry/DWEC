@@ -1,3 +1,7 @@
+/**
+ * 2-Realiza un programa que solicite números al usuario hasta que introduzca un 0. Y que
+muestre los valores: máximo, mínimo, suma, media y total de números introducidos
+ */
 let num = 1;
 let suma = 0;
 //Si el primer número es negativo, el mínimo no se actualizará 
