@@ -3,30 +3,35 @@ Después por cada tipo se mostrará el tipo y la colección de parámetros de es
 la posición original entre los parámetros.
 Añade el código auxiliar necesario para probar la aplicación.
  */
-function agruparPorTipo(...params) {
-    const agrupados = {};
 
-    // Recorrer los parámetros
-    params.forEach((param, index) => {
-        const tipo = typeof param;
-        
-        // Inicializar el array si el tipo no existe en el objeto
-        if (!agrupados[tipo]) {
-            agrupados[tipo] = [];
+function agruparPorTipo() {
+    const grupos = {}; // Objeto para agrupar parámetros
+
+    // Recorrer los argumentos recibidos
+    for (let i = 0; i < arguments.length; i++) {
+        const parametro = arguments[i]; // Obtener el parámetro actual
+        const tipo = typeof parametro; // Obtener el tipo del parámetro
+
+        // Verificar si el grupo ya existe
+        if (!grupos[tipo]) {
+            grupos[tipo] = []; // Inicializar el grupo si no existe
         }
-
-        // Añadir el parámetro y su posición
-        agrupados[tipo].push({ valor: param, posicion: index });
-    });
+        
+        // Agregar el parámetro y su posición al grupo
+        grupos[tipo][grupos[tipo].length] = { valor: parametro, posicion: grupos[tipo].length };
+    }
 
     // Mostrar los resultados
-    for (const tipo in agrupados) {
-        console.log(`Tipo: ${tipo}`);
-        agrupados[tipo].forEach(item => {
-            console.log(`Valor: ${item.valor}, Posición: ${item.posicion}`);
-        });
+    for (const tipo in grupos) {
+        console.log("Tipo: " + tipo);
+        console.log("Valores y posiciones:");
+        
+        // Recorrer los valores del grupo
+        for (let j = 0; j < grupos[tipo].length; j++) {
+            console.log("Valor: " + grupos[tipo][j].valor + ", Posición: " + j);
+        }
+        
+        console.log(""); // Añadir una línea en blanco para separar grupos
     }
 }
 
-// Código auxiliar para probar la función
-agruparPorTipo("Hola", 23, true, "Mundo", 42, null, 3.14, false, undefined);
