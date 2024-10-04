@@ -3,35 +3,66 @@ Después por cada tipo se mostrará el tipo y la colección de parámetros de es
 la posición original entre los parámetros.
 Añade el código auxiliar necesario para probar la aplicación.
  */
+'use strict;'
 
-function agruparPorTipo() {
-    const grupos = {}; // Objeto para agrupar parámetros
+function agrupar(...args) {
+   /**
+    * Aqui creamos un objeto con 4 propiedades, 
+    * cada una de ellas es una lista vacía
+    */
+   const agrupadosPorTipo = {
+      number: [],
+      string: [],
+      boolean: [],
+      object: []
+   }
+   /**
+    * Aqui usamos un for para recorrer la lista de args 
+    * que contiene los valores que pasate a la funcion
+    * LINEA 25: obtiene los valores en la posicion de i
+    * LINEA 27: determina el tipo de ese valor usando typeof
+    */
+   for (let i = 0; i < args.length; i++) {
+      let valor = args[i];
+      let tipo = typeof valor;
 
-    // Recorrer los argumentos recibidos
-    for (let i = 0; i < arguments.length; i++) {
-        const parametro = arguments[i]; // Obtener el parámetro actual
-        const tipo = typeof parametro; // Obtener el tipo del parámetro
+      /**
+       * Ahora guardamos el valor segun su tipo
+       */
+      if (tipo === "number") {
+         agrupadosPorTipo.number[agrupadosPorTipo.number.length] = { valor: valor, posicion: i };
+      } else if (tipo === "string") {
+         agrupadosPorTipo.string[agrupadosPorTipo.string.length] = { valor: valor, posicion: i };
+      } else if (tipo === "boolean") {
+         agrupadosPorTipo.boolean[agrupadosPorTipo.boolean.length] = { valor: valor, posicion: i };
+      } else {
+         agrupadosPorTipo.object[agrupadosPorTipo.object.length] = { valor: valor, posicion: i };
+      }
 
-        // Verificar si el grupo ya existe
-        if (!grupos[tipo]) {
-            grupos[tipo] = []; // Inicializar el grupo si no existe
-        }
-        
-        // Agregar el parámetro y su posición al grupo
-        grupos[tipo][grupos[tipo].length] = { valor: parametro, posicion: grupos[tipo].length };
-    }
+   }
 
-    // Mostrar los resultados
-    for (const tipo in grupos) {
-        console.log("Tipo: " + tipo);
-        console.log("Valores y posiciones:");
-        
-        // Recorrer los valores del grupo
-        for (let j = 0; j < grupos[tipo].length; j++) {
-            console.log("Valor: " + grupos[tipo][j].valor + ", Posición: " + j);
-        }
-        
-        console.log(""); // Añadir una línea en blanco para separar grupos
-    }
+
+   /**
+    * PRIMER FON IN:
+    * Recorre cada tipo de dato 
+    * Si hay valores gaurdados por ese tipo los muestra en consola
+    * SEGUNDO FOR
+    * Para cada tipo, recorremos la lista de valores y 
+    * mostrando su posición original y el valor en sí.
+    */
+   for (let tipo in agrupadosPorTipo) {
+      if (agrupadosPorTipo[tipo].length > 0) {
+         console.log("Tipo: " + tipo);  // Mostramos el tipo
+         for (let j = 0; j < agrupadosPorTipo[tipo].length; j++) {
+            console.log("Posición: " + agrupadosPorTipo[tipo][j].posicion + ", Valor: " + agrupadosPorTipo[tipo][j].valor);
+         }
+         console.log("---");
+      }
+   }
+
+   agruparPorTipo(5, "Hola", true, 10, "Mundo", false, 3.14);
 }
+
+
+
 
