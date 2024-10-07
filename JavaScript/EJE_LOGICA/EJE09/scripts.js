@@ -7,8 +7,8 @@ Añade el código auxiliar necesario para probar la aplicación.
 
 function agrupar(...args) {
    /**
-    * Aqui creamos un objeto con 4 propiedades, 
-    * cada una de ellas es una lista vacía
+    * *Aqui creamos un objeto con 4 propiedades, 
+    * *cada una de ellas es una lista vacía
     */
    const agrupadosPorTipo = {
       number: [],
@@ -17,17 +17,17 @@ function agrupar(...args) {
       object: []
    }
    /**
-    * Aqui usamos un for para recorrer la lista de args 
-    * que contiene los valores que pasate a la funcion
-    * LINEA 25: obtiene los valores en la posicion de i
-    * LINEA 27: determina el tipo de ese valor usando typeof
+    * *Aqui usamos un for para recorrer la lista de args 
+    * *que contiene los valores que pasate a la funcion
+    * !LINEA 25: obtiene los valores en la posicion de i
+    * !LINEA 27: determina el tipo de ese valor usando typeof
     */
    for (let i = 0; i < args.length; i++) {
       let valor = args[i];
       let tipo = typeof valor;
 
       /**
-       * Ahora guardamos el valor segun su tipo
+       * *Ahora guardamos el valor segun su tipo
        */
       if (tipo === "number") {
          agrupadosPorTipo.number[agrupadosPorTipo.number.length] = { valor: valor, posicion: i };
@@ -43,12 +43,12 @@ function agrupar(...args) {
 
 
    /**
-    * PRIMER FON IN:
-    * Recorre cada tipo de dato 
-    * Si hay valores gaurdados por ese tipo los muestra en consola
-    * SEGUNDO FOR
-    * Para cada tipo, recorremos la lista de valores y 
-    * mostrando su posición original y el valor en sí.
+    * !PRIMER FON IN:
+    * *Recorre cada tipo de dato 
+    * *Si hay valores guardados por ese tipo los muestra en consola
+    * !SEGUNDO FOR:
+    * *Para cada tipo, recorremos la lista de valores y 
+    * *mostrando su posición original y el valor en sí.
     */
    for (let tipo in agrupadosPorTipo) {
       if (agrupadosPorTipo[tipo].length > 0) {
