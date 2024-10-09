@@ -27,5 +27,4 @@ Consideraciones:
 • Implementa un menú para interactuar con la aplicación. Incluye la opción de terminar.
 • Añade validaciones.
 • Estructura y comenta el código.
-
  */
