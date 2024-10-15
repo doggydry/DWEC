@@ -1,0 +1,20 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: antiquewhite;
+}
+
+input {
+    font-size: 15px;
+    height: 30px;
+    width: 100px;
+    padding: 0px;
+    margin: 0px;
+    background-color:greenyellow;
+    border-radius: 5px;
+}
+
+input:hover{
+    background-color:rgb(152, 228, 39) ;
+    
+}
