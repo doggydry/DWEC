@@ -1,0 +1,45 @@
+body {
+    text-align: center;
+    background-color: rgb(0, 204, 255);
+}
+body h1{
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+}
+label {
+    font-family:'Courier New', Courier, monospace;
+    font-size: 25px;
+}
+input {
+    width: 80%;
+    text-align: center;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(153, 232, 252);
+    outline: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+
+#fibonacciBtn{
+    background-color: aquamarine;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+}
+#resultado {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    word-wrap: break-word; /* Permite que las palabras largas se dividan y salten a la siguiente línea */
+    overflow-wrap: break-word; /* Compatible con navegadores que no soportan word-wrap */
+    white-space: normal; /* Asegura que el texto se ajuste a múltiples líneas */
+    width: 100%; /* Asegúrate de que ocupe todo el ancho disponible */
+    margin-top: 20px; /* Espacio superior opcional */
+    text-align: center; /* Centra el texto, opcional */
+}
+

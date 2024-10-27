@@ -45,13 +45,16 @@ const $bingo = (function () {
      */
     function sacarBola() {
         let numeros = [];
-        let numerosSacados = [];
+        let bolasSacadas = [];
         // Inicializar las bolas del 1 al 90
         for (let i = 1; i <= 90; i++) {
             numeros.push(i);
         }
         // Mezclar los números
         numeros.sort(() => Math.random() - 0.5);
+        bolasSacadas[numeros.pop()];
+        return bolasSacadas;
+        
     }
 
     /**
@@ -73,3 +76,4 @@ const $bingo = (function () {
 
 
 console.log($bingo.sacarBola());
+

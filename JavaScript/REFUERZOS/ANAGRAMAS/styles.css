@@ -1,0 +1,49 @@
+h1 {
+    text-align: center;
+    font-size: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+body {
+    text-align: center;
+    background-color: rgb(0, 68, 255);
+    color: azure;
+}
+
+input {
+    border: none;
+    border-radius: 5px;
+    width: 80%;
+    padding: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    background-color:  rgb(21, 64, 184);
+    color: white;
+}
+label {
+    font-size: 30px;
+}
+
+button {
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(0, 170, 128);
+    color: white;
+    cursor: pointer;
+
+}
+
+button:hover {
+    background-color: rgb(4, 100, 76);
+}
+#resultado {
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: rgb(21, 64, 184);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
