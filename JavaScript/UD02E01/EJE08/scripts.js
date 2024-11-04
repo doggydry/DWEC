@@ -22,4 +22,4 @@ function factorial (numero) {
 }
 
 // Ejemplo: Llamada desde consola
-alert(factorial(10)); // Devolverá "4x3x2x1=24"
+alert(factorial(10)); 
