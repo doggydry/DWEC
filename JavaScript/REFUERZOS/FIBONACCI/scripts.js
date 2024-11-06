@@ -25,3 +25,4 @@ document.getElementById('fibonacciBtn').addEventListener('click', function(){
   const resultado = Fibonacci(tamanio);
   document.getElementById('resultado').innerHTML = `Serie de Fibonacci: ${resultado}`;
 });
+

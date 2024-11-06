@@ -4,8 +4,8 @@ function Persona2 (nombre, nacimiento, hobbies ){
     this.hobbies = hobbies;
 
     this.get = function (){
-        let edadReal = edad.getFullYear() - this.nacimiento.getFullYear();
-
+        let hoy = new Date ();
+        
         if (edadReal.getMonth()<mes){
             edadReal--;
         }
@@ -16,5 +16,5 @@ function Persona2 (nombre, nacimiento, hobbies ){
     }
 }
 
-const persona1 = new Persona2 ('Juan',30,['correr, cantar y volar.']);
+const persona1 = new Persona2 ('Juan',2000,['correr, cantar y volar.']);
 console.log(persona1.saludar());

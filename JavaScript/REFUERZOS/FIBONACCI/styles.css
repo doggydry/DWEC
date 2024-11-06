@@ -5,6 +5,13 @@ body {
 body h1{
     font-size: 50px;
     font-family: 'Courier New', Courier, monospace;
+    background-color: aquamarine;
+    box-sizing: border-box;
+    padding: 5px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: rgb(15, 221, 152) -5px 5px;
+    
 }
 label {
     font-family:'Courier New', Courier, monospace;
@@ -17,6 +24,7 @@ input {
     border: none;
     border-radius: 5px;
     background-color: rgb(153, 232, 252);
+    box-shadow: rgb(14, 158, 194) -5px 5px;
     outline: none;
     font-family: 'Courier New', Courier, monospace;
     font-size: 20px;
@@ -26,12 +34,20 @@ input {
     background-color: aquamarine;
     border: none;
     border-radius: 5px;
+    box-shadow: rgb(15, 221, 152) -5px 5px;
     padding: 10px;
     margin-top: 10px;
     cursor: pointer;
     font-family: 'Courier New', Courier, monospace;
     font-size: 15px;
+    box-sizing: border-box;
+    
 }
+
+#fibonacciBtn:hover{
+    background-color: rgb(6, 226, 153);
+}
+
 #resultado {
     font-family: 'Courier New', Courier, monospace;
     font-size: 20px;
@@ -41,5 +57,9 @@ input {
     width: 100%; /* Asegúrate de que ocupe todo el ancho disponible */
     margin-top: 20px; /* Espacio superior opcional */
     text-align: center; /* Centra el texto, opcional */
+    background-color: rgb(153, 232, 252);
+    box-shadow: rgb(14, 158, 194) -5px 5px;
+    border: none;
+    border-radius: 5px;
 }
 
