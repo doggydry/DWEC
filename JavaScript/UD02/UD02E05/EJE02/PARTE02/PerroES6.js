@@ -1,7 +1,7 @@
 import { AnimalES6 } from './AnimalES6.js';
 export class PerroES6 extends AnimalES6{
     constructor(){
-        super('carlos');
+        super('perro','carlos');
     }
 
     comer (){
@@ -11,6 +11,6 @@ export class PerroES6 extends AnimalES6{
         return super.dormir();
     }
     hacerAlgo(){
-        return `${nombre} hace guau`;
+        return `${this.nombre} hace guau`;
     }
 }

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const persona2 = {
     nombre: 'Nestor',
     nacimiento: '',
@@ -16,12 +15,3 @@ const persona2 = {
 };
 
 console.log(persona2.saludar());
-=======
-const persona2 = {
-    nombre: '',
-    edad: 0,
-
-
-
-}
->>>>>>> 20a9bf95b080368fc1f44829f853aa1991dd8139

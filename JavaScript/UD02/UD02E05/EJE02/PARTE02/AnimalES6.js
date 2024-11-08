@@ -8,10 +8,10 @@ export class AnimalES6{
         return `${this.nombre} esta comiendo`;
     }
     dormir (){
-        return `${dormir} esta comiendo`;
+        return `${this.nombre} esta durmiendo`;
     }
     hacerAlgo(){
-        return `${nombre} esta haciendo algo`;
+        return `${this.nombre} esta haciendo algo`;
     }
 }
 
