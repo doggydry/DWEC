@@ -1,4 +1,4 @@
-class Utilidades {
+export class Utilidades {
 
     static serializarFactura(facturaOBJ){
      return JSON.stringify(facturaOBJ);   

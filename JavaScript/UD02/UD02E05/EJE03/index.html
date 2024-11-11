@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="Factura.js" defer></script>
+    <script src="Auxiliar.js" type="module" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
 </head>
 <main class="container">
@@ -15,39 +15,27 @@
         <form id="formFacturas">
             <h3>Actualizar Factura</h3>
             <label for="NIF">NIF</label>
-            <br>
             <input type="text" id="NIF" name="nif">
-            <br>
             <label for="fecha">Fecha</label>
-            <br>
-            <input type="text" id="fecha" name="Fecha" placeholder="aa/mm/dd">
-            <br>
+            <input type="date" id="fecha" name="Fecha" >
             <label for="hora">Hora</label>
-            <br>
             <input type="time" id="hora" name="Hora">
-            <br>
             <label for="pagada">Pagada</label>
-            <br>
             <input type="text" id="pagada" name="Pagada" placeholder="Sí / No">
-            <input type="submit" id="ActualizarBtn" value="Actualizar">
+            <input type="button" id="ActualizarBtn" value="Actualizar">
+            <div id="resultado"></div>
         </form>
         <h3>Actualizar Líneas de Factura</h3>
         <form id="formLineas">
             <label for="concepto">Concepto</label>
-            <br>
             <input type="text" id="concepto" name="Concepto">
-            <br>
             <label for="cantidad">Cantidad</label>
-            <br>
             <input type="number" id="cantidad" name="Cantidad">
-            <br>
             <label for="precio">Precio</label>
-            <br>
             <input type="number" id="precio" name="Precio">
             <input type="submit" id="AgregarBtn" value="Agregar">
             <input type="submit" id="BorrarBtn" value="Borrar">
         </form>
-
     </body>
 
 

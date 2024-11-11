@@ -1,4 +1,4 @@
-class Factura {
+export class Factura {
     _clienteNIF;
     _fecha;
     _hora;
@@ -28,6 +28,19 @@ class Factura {
         return this._lineas.length;
     }
 
+    imprimirCabeceraFactura(){
+        let datosBasicos = `NIF: ${this._clienteNIF} \nFecha: ${this._fecha} \nHora: ${this._hora} \nPagado: ${this._pagado ? 'Si' : 'No'}`;
+        return datosBasicos;
+    }
+    
+    imprimirLineasFacturas(){
+        let datosLineas = '';
+        this._lineas.forEach(linea => {
+            datosLineas += `\nConcepto: ${linea.concepto}, Precio Unitario: ${linea.precioUnitario}, Cantidad: ${linea.cantidad}`;
+        });
+        return datosBasicos + datosLineas;
+    }
+    
     imprimirFactura() {
         let datosBasicos = `NIF: ${this._clienteNIF} \nFecha: ${this._fecha} \nHora: ${this._hora} \nPagado: ${this._pagado ? 'Si' : 'No'}`;
         let datosLineas = '';
@@ -38,14 +51,18 @@ class Factura {
     }
 
 }
+  
 
-const factura1 = new Factura('1234547A', '19/02/2002', '19:00', true, [{ concepto: 'Chaqueta', precioUnitario: 6, cantidad: 14 },
-{ concepto: 'Abrigo', precioUnitario: 2, cantidad: 9 },
-{ concepto: 'Raqueta', precioUnitario: 1, cantidad: 6 }]);
 
-console.log(factura1.importeTotal);
-console.log(factura1.numeroArticulos);
-console.log(factura1.imprimirFactura());
+
+
+// const factura1 = new Factura('1234547A', '19/02/2002', '19:00', true, [{ concepto: 'Chaqueta', precioUnitario: 6, cantidad: 14 },
+// { concepto: 'Abrigo', precioUnitario: 2, cantidad: 9 },
+// { concepto: 'Raqueta', precioUnitario: 1, cantidad: 6 }]);
+
+// console.log(factura1.importeTotal);
+// console.log(factura1.numeroArticulos);
+// console.log(factura1.imprimirFactura());
 
 
 
