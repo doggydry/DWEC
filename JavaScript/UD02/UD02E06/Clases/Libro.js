@@ -1,3 +1,5 @@
+import datos from './datos.js';
+
 export class Libro {
     _libroID;
     _titulo;
@@ -40,13 +42,35 @@ export class Libro {
     generarHTMLPropiedades(){
 
     }
+    generarHTMLEdicion(){
+        return `
+        <h1>Editar un libro</h1>
+        <form id="formEditarLibro">
+            <label for="tituloEdit">Titulo</label>
+            <input type="text" id="tituloEdit">
+
+            <label for="isbnEdit">ISBN</label>
+            <input type="text" id="isbnEdit">
+
+            <label for="autoridEdit">ID del Autor</label>
+            <input type="number" id="autoridEdit">
+
+            <label for="bibliotecaidEdit">ID de la Biblioteca</label>
+            <input type="number" id="bibliotecaidEdit"> 
+            <input type="button" id="editarLibroBtn" value="Editar">
+        </form>
+
+        `;
+    }
+
+    generarHTMLListadoPrestamos(){
+        return `
+        <h1>Listado de libros</h1>
+        `;
+    }
+
+    generarHTMLListadoPrestamos(){
+        
+    }
 }
-
-// Crea una instancia de Libro
-const libro = new Libro(1, 'prueba', '123-456-789', 1, 1, [], true);
-
-// Llama al método generarHTMLCreacion() a través de la instancia
-const html = libro.generarHTMLCreacion();
-document.querySelector('.container').innerHTML = html;
-
 
