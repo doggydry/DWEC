@@ -28,19 +28,19 @@ export class Factura {
         return this._lineas.length;
     }
 
-    imprimirCabeceraFactura(){
+    imprimirCabeceraFactura() {
         let datosBasicos = `NIF: ${this._clienteNIF} \nFecha: ${this._fecha} \nHora: ${this._hora} \nPagado: ${this._pagado ? 'Si' : 'No'}`;
         return datosBasicos;
     }
-    
-    imprimirLineasFacturas(){
+
+    imprimirLineasFacturas() {
         let datosLineas = '';
         this._lineas.forEach(linea => {
             datosLineas += `\nConcepto: ${linea.concepto}, Precio Unitario: ${linea.precioUnitario}, Cantidad: ${linea.cantidad}`;
         });
         return datosBasicos + datosLineas;
     }
-    
+
     imprimirFactura() {
         let datosBasicos = `NIF: ${this._clienteNIF} \nFecha: ${this._fecha} \nHora: ${this._hora} \nPagado: ${this._pagado ? 'Si' : 'No'}`;
         let datosLineas = '';
@@ -49,9 +49,17 @@ export class Factura {
         });
         return datosBasicos + datosLineas;
     }
+    
+    agregarLinea(concepto, cantidad, precio) {
+        this._lineas.push({ concepto, cantidad, precioUnitario: precio });
+    }
+
+    eliminarLinea() {
+        this._lineas.pop();
+    }
 
 }
-  
+
 
 
 
