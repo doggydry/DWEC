@@ -22,7 +22,7 @@ export class Libro {
     generarHTMLCreacion() {
         return `
         <h1>Crear nuevo libro</h1>
-        <form id="formNuevoLibro">
+        <form id="formNuevoLibro" data-formulario="formNuevoLibro">
             <label for="titulo">Titulo</label>
             <input type="text" id="titulo">
 
@@ -39,13 +39,25 @@ export class Libro {
         </form>
       `;
     }
-    generarHTMLPropiedades(){
+    generarHTMLPropiedades() {
+        return `<h1>Gestión de libro</h1>
+        <div data-entidad="libro">
+        <ul>
+        <li><a href="#">Editar libro</a></li>
+        <li><a href="#">Borrar libro</a></li>
+        <li><a href="#">Listar Prestamos</a></li>
+        <li><a href="#">Crear Prestamo</a></li>
+        <li><a href="#">Devolver Prestamos</a></li>
+        </ul>
+        </div>
+        `;
+
 
     }
-    generarHTMLEdicion(){
+    generarHTMLEdicion() {
         return `
         <h1>Editar un libro</h1>
-        <form id="formEditarLibro">
+        <form id="formEditarLibro" data-formularios="formEditarLibro">
             <label for="tituloEdit">Titulo</label>
             <input type="text" id="tituloEdit">
 
@@ -63,14 +75,11 @@ export class Libro {
         `;
     }
 
-    generarHTMLListadoPrestamos(){
+    generarHTMLListadoPrestamos() {
         return `
         <h1>Listado de libros</h1>
-        `;
+        ${}`;
     }
 
-    generarHTMLListadoPrestamos(){
-        
-    }
 }
 
