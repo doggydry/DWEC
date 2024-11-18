@@ -51,8 +51,6 @@ export class Libro {
         </ul>
         </div>
         `;
-
-
     }
     generarHTMLEdicion() {
         return `
@@ -71,14 +69,13 @@ export class Libro {
             <input type="number" id="bibliotecaidEdit"> 
             <input type="button" id="editarLibroBtn" value="Editar">
         </form>
-
         `;
     }
 
     generarHTMLListadoPrestamos() {
         return `
         <h1>Listado de libros</h1>
-        ${}`;
+        `;
     }
 
 }

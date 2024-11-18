@@ -10,13 +10,12 @@ const generarHTMLListadoLibros = libro.generarHTMLListadoPrestamos();
 const generarHTMLCreacionAutor = autor.generarHTMLCreacion();
 // const generarHTMLEdicionAutor = autor.generarHTMLCreacion();
 
-const $divNuevoLibro = document.querySelector('[data-formularios="formNuevoLibro"]');
-const $divEditarLibro = document.querySelector('[data-editarLibro="formEditarLibro"]');
-const $divNuevoAutor = document.querySelector('[data-autor="formNuevoAutor"]');
-const $divListadoPrestamos = document.querySelector('[data-listadoPrestamos="listado"]');
+const $divNuevoLibro = document.querySelector('#formNuevoLibro');
+const $divEditarLibro = document.querySelector('#formEditarLibro');
+const $divNuevoAutor = document.querySelector('#formNuevoAutor');
 
-$divNuevoAutor.innerHTML = generarHTMLCreacionAutor;
+
 $divNuevoLibro.innerHTML = generarHTMLCreacionlibro;
-$divEditarLibro.innerHTML = generarHTMLEdicionLibro;
-$divListadoPrestamos.innerHTML = generarHTMLListadoPrestamos;
+console.log($divNuevoAutor.dataset.entidad);
+
 
