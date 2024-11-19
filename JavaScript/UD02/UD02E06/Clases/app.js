@@ -19,3 +19,30 @@ $divNuevoLibro.innerHTML = generarHTMLCreacionlibro;
 console.log($divNuevoAutor.dataset.entidad);
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
