@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="DOMAnalizador.js"></script>
+    <title>Prueba de DOM</title>
+    <style>
+        .important { color: red; }
+        .highlight { font-weight: bold; }
+    </style>
+</head>
+<body>
+    <header id="main-header" data-role="header">
+        <h1>Bienvenido</h1>
+        <nav>
+            <ul>
+                <li class="important" data-link="home">Inicio</li>
+                <li class="highlight" data-link="about">Sobre nosotros</li>
+            </ul>
+        </nav>
+    </header>
+    <main id="content" class="main-content">
+        <section>
+            <h2>Sección 1</h2>
+            <p>Este es un párrafo en la sección 1.</p>
+        </section>
+        <section id="special-section">
+            <h2>Sección 2</h2>
+            <article>
+                <h3>Artículo 1</h3>
+                <p>Contenido del artículo 1</p>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p class="important">Pie de página</p>
+    </footer>
+</body>
+</html>
