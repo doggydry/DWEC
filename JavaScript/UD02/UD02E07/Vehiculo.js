@@ -1,17 +1,18 @@
-export class Vehiculo {
-    _marca;
-    _modelo;
-    _matricula;
-    _anio;
-    _motor;
-    _propietario;
+class Vehiculo {
 
-    constructor (_marca, _modelo, _matricula, _anio, _motor, _propietario = [{}]){
-        this._marca = _marca;
-        this._modelo = _modelo;
-        this._matricula = _matricula;
-        this._anio = _anio;
-        this._motor = _motor;
-        this._propietario = _propietario;
+    #marca;
+    #modelo;
+    #matricula;
+    #anio;
+    #motor;
+    #propietario;
+
+    constructor (marca, modelo, matricula, anio, motor, propietario = [{}]){
+        this.#marca = marca;
+        this.#modelo = modelo;
+        this.#matricula = matricula;
+        this.#anio = anio;
+        this.#motor = motor;
+        this.#propietario = propietario;
     }
 }
