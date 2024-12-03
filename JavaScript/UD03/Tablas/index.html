@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Alumnos</title>
+  <style>
+    /* Estilos iniciales */
+    body {
+      font-family: Arial, sans-serif;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      background: #f5f5f5;
+    }
+    #contenedor {
+      margin: 20px;
+    }
+    .tabla-detalles, .ficha {
+      margin-bottom: 10px;
+    }
+    .resaltado {
+      background-color: #e0f7fa;
+    }
+    .seleccionado {
+      background-color: #80deea;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <button id="vistaDetalles">Detalles</button>
+    <button id="vistaFichas">Ficha</button>
+  </header>
+  <main id="contenedor"></main>
+
+  <script src="script.js"></script>
+</body>
+</html>
