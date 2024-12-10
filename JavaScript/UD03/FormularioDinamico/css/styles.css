@@ -1,0 +1,17 @@
+.container {
+    font-size: 2em;
+    display: grid;
+    grid-template-areas: "tabla1 tabla2";
+    justify-content: center;
+    border-color: red;
+}
+
+.tabla1 {
+    justify-content: center;
+    background-color: red;
+}
+
+.tabla2 {
+    justify-content: center;
+    background-color: antiquewhite;
+}
