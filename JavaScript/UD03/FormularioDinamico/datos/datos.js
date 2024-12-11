@@ -1,4 +1,4 @@
-[
+const alumnos = [
     { alumnoId: 1, nombre: "Ana López", ciclo: "DAW" },
     { alumnoId: 2, nombre: "Laura Sánchez", ciclo: "ASIR" },
     { alumnoId: 3, nombre: "Carlos Martínez", ciclo: "DAM" },
@@ -12,4 +12,4 @@
     { alumnoId: 11, nombre: "Elena Ruiz", ciclo: "DAM" },
     { alumnoId: 12, nombre: "Álvaro Morales", ciclo: "ASIR" }
 ]
-export default datos;
+export default alumnos;
