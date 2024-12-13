@@ -3,7 +3,6 @@ import alumnos from "../datos/datos.js";
 // Referencias a los elementos del DOM
 const cicloSelect = document.getElementById("ciclo");
 const tablaIzquierda = document.getElementById("tabla-izquierda");
-
 // Evento para el cambio en el filtro
 cicloSelect.addEventListener("change", () => {
     const cicloSeleccionado = cicloSelect.value;
