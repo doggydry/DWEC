@@ -75,12 +75,17 @@ header h1 {
 
 /* Botones Centrales */
 .center {
+    flex: 0.5; /* Toma menos espacio proporcional en el contenedor */
+    max-width: 80px; /* Ancho máximo */
+    min-width: 60px; /* Asegura que no sea demasiado pequeña */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 10px;
+    padding: 5px; /* Espacio interno reducido */
 }
+
 
 .center button {
     padding: 10px 15px;

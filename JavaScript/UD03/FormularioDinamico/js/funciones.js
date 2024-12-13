@@ -10,12 +10,18 @@ cicloSelect.addEventListener("change", () => {
     mostrarAlumnos(cicloSeleccionado);
 });
 
-// Función para filtrar y mostrar alumnos
 function mostrarAlumnos(ciclo) {
+    // Obtener los IDs de los alumnos que ya están en la tabla derecha
+    const idsSeleccionados = Array.from(tablaDerecha.querySelectorAll(".fila")).map(fila =>
+        fila.dataset.id
+    );
+
     // Filtrar alumnos
-    const alumnosFiltrados = ciclo === "Todos" 
-        ? alumnos 
-        : alumnos.filter(alumno => alumno.ciclo === ciclo);
+    const alumnosFiltrados = alumnos.filter(alumno => {
+        const perteneceCiclo = ciclo === "Todos" || alumno.ciclo === ciclo;
+        const noSeleccionado = !idsSeleccionados.includes(alumno.alumnoId.toString());
+        return perteneceCiclo && noSeleccionado;
+    });
 
     // Limpiar la tabla
     tablaIzquierda.innerHTML = "";
@@ -37,6 +43,7 @@ function mostrarAlumnos(ciclo) {
         });
     });
 }
+
 // Referencias adicionales a los elementos del DOM
 const botonDerecha = document.getElementById("mover-derecha");
 const botonIzquierda = document.getElementById("mover-izquierda");
